@@ -3,7 +3,7 @@
 // TODO: Kolla på validering av userEmail och password? Göra det i js eller kan man göra i html?
 // kanske lägga validering på "step out" eller vad det heter för input-fälten
 
-// Denna js-fil skrev jag mest för kul och för att leka lite
+// Denna js-fil skrev jag mest för kul och för att leka lite, när man klickar logga in så fadear rutan ut och ett välkomstmeddelande skrivs
 // Förmodligen mycket som skulle kunna förbättras! Jag har kommenterat mycket i denna fil för att visa hur jag tänker.
 
 const mainContainer = document.querySelector(".main-container");
@@ -26,8 +26,6 @@ loginBtn.addEventListener("click", (e) => {
     const msgSpan = document.createElement("span");
     msgSpan.classList.add("welcome-msg");
     mainContainer.prepend(msgSpan);
-    // Strax efter att loginrutan tagits bort börjar jag skriva ett välkomstmeddelande till min nya span
-    // Se printSlow funktionen längre ned
 
     // Jag hade först gjort min loginruta för username, sen såg jag att det skulle vara email..
     // Så nedan är min lösning för att i de flesta fall ändå kunna skriva Hello NAMN!
@@ -35,6 +33,8 @@ loginBtn.addEventListener("click", (e) => {
     [".", "-", "_"].forEach((c) => {
       if (name.includes(c)) name = name.split(c)[0];
     });
+
+    // Strax efter att loginrutan tagits bort skriver jag ett välkomstmeddelande till min nya span
     setTimeout(printSlow, 1000, msgSpan, `Hello ${capitalizeName(name)}!`);
   }
 });

@@ -25,26 +25,22 @@ loginBtn.addEventListener("click", (e) => {
     [".", "-", "_"].forEach((c) => {
       if (name.includes(c)) name = name.split(c)[0];
     });
-
-    setTimeout(writeSlow, 1000, msgSpan, `Hello ${capitalizeName(name)}!`);
+    const msgCharArr = `Hello ${capitalizeName(name)}!`.split("");
+    setTimeout(writeSlow, 1000, msgSpan, msgCharArr);
   }
 });
 
 // För att ge effekt av att medelandet skrivs på tangetbord live lägger jag till en bokstav i taget på variablen text nedan
 // Detta gör jag via recursion tills arrayen med bokstäver är tom.
-const writeSlow = (el, msg) => {
-  const cArr = msg.split("");
-  let text = "";
-  const writeDelayed = () => {
-    text += cArr.shift();
-    el.textContent = text;
-    if (cArr.length === 0) {
-      setTimeout(() => (el.style.opacity = 0), 1600);
-      return;
-    }
-    setTimeout(writeDelayed, getRandomInt(180, 280));
-  };
-  writeDelayed();
+
+const writeSlow = (el, charArr, curText = "") => {
+  curText += charArr.shift();
+  el.textContent = curText;
+  if (charArr.length === 0) {
+    setTimeout(() => (el.style.opacity = 0), 1600);
+    return;
+  }
+  setTimeout(writeSlow, getRandomInt(180, 280), el, charArr, curText);
 };
 
 const getRandomInt = (min, max) =>

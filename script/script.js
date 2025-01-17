@@ -30,6 +30,8 @@ loginBtn.addEventListener("click", (e) => {
   }
 });
 
+// För att ge effekt av att medelandet skrivs på tangetbord live lägger jag till en bokstav i taget på variablen text nedan
+// Detta gör jag via recursion tills arrayen med bokstäver är tom.
 const writeSlow = (el, msg) => {
   const cArr = msg.split("");
   let text = "";

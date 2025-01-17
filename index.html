@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A test login page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- TODO Fixa typ fontawesome och använd mail och låsikon som placeholder i inputfälten för inlogg? -->
+    <title>Login</title>
+  </head>
+  <body>
+    <main class="main-container">
+      <!-- TODO Lägg till en till section efter nedan med viss info och/eller bild, 
+      denna sektion ska flexa column-reverse så den hamnar ovanför login på mobil.
+      Knapp/länk för att regga nytt konto vart? -->
+      <section id="section--login" class="login-form-container">
+        <form class="login-form">
+          <div>
+            <h1>Welcome</h1>
+            <hr />
+          </div>
+          <!-- Fixa labels för båda nedan fields, till exempel för screen readers etc -->
+          <input
+            class="input-field"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+            value=""
+            autocomplete="off"
+          />
+          <input
+            class="input-field"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            value=""
+            autocomplete="off"
+          />
+          <span class="remember-me">
+            <input
+              type="checkbox"
+              id="rememberLogin"
+              name="remember"
+              value="true"
+            />
+            <label for="rememberLogin">Remember me</label>
+          </span>
+          <input class="login-btn" type="submit" value="Login" id="login" />
+        </form>
+      </section>
+    </main>
+    <script src="script/script.js"></script>
+  </body>
+</html>

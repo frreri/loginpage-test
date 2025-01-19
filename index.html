@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -14,21 +14,20 @@
       denna sektion ska flexa column-reverse så den hamnar ovanför login på mobil.
       Knapp/länk för att regga nytt konto vart? -->
       <section id="section--login" class="login-form-container">
-        <form class="login-form">
+        <form class="login-form" method="post">
           <div>
             <h1>Welcome</h1>
             <hr />
           </div>
-          <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc, 
-          fixa även validation på fälten-->
+          <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc -->
           <input
             class="input-field"
-            type="text"
+            type="email"
             id="user-email"
             name="user-email"
             placeholder="Email"
-            value=""
             autocomplete="off"
+            required
           />
           <input
             class="input-field"
@@ -36,8 +35,10 @@
             id="user-pw"
             name="user-pw"
             placeholder="Password"
-            value=""
             autocomplete="off"
+            required
+            minlength="8"
+            maxlength="16"
           />
           <span class="remember-me">
             <input

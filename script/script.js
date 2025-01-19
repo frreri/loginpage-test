@@ -4,11 +4,11 @@
 
 const mainContainer = document.querySelector(".main-container");
 const loginWindow = document.querySelector(".login-form-container");
-const loginBtn = document.querySelector(".login-btn");
+const loginForm = document.querySelector(".login-form");
 const userEmail = document.querySelector("#user-email");
 const userPassword = document.querySelector("#user-pw");
 
-loginBtn.addEventListener("click", (e) => {
+loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = userEmail.value;
   const pass = userPassword.value;
@@ -21,10 +21,11 @@ loginBtn.addEventListener("click", (e) => {
     msgSpan.classList.add("welcome-msg");
     mainContainer.prepend(msgSpan);
 
-    let name = email.split("@")[0];
-    [".", "-", "_"].forEach((c) => {
+    let name = email;
+    [".", "-", "_", "@"].forEach((c) => {
       if (name.includes(c)) name = name.split(c)[0];
     });
+
     const msgCharArr = `Hello ${capitalizeName(name)}!`.split("");
     setTimeout(writeSlow, 1000, msgSpan, msgCharArr);
   }

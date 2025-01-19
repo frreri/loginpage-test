@@ -5,8 +5,8 @@
 const mainContainer = document.querySelector(".main-container");
 const loginWindow = document.querySelector(".login-form-container");
 const loginBtn = document.querySelector(".login-btn");
-const userEmail = document.querySelector("#email");
-const userPassword = document.querySelector("#password");
+const userEmail = document.querySelector("#user-email");
+const userPassword = document.querySelector("#user-pw");
 
 loginBtn.addEventListener("click", (e) => {
   e.preventDefault();

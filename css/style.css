@@ -86,7 +86,7 @@ hr {
 }
 
 .register-btn {
-  background-color: #a3be8c;
+  background-color: #709358;
   color: #eceff4;
   font-size: 1.1rem;
   border: none;
@@ -97,7 +97,7 @@ hr {
 }
 
 .register-btn:hover {
-  background-color: #93b07b;
+  background-color: #81a769;
 }
 
 .welcome-msg {

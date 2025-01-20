@@ -83,4 +83,6 @@ hr {
   font-size: 0.9rem;
   display: flex;
   gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 4px;
 }

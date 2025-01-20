@@ -8,6 +8,8 @@
 hr {
   border: none;
   border-top: 2px solid #d8dee9;
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
 
 .main-container {

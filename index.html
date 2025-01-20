@@ -10,50 +10,53 @@
   </head>
   <body>
     <main class="main-container">
-      <!-- TODO Lägg till en till section efter nedan med viss info och/eller bild, 
-      denna sektion ska flexa column-reverse så den hamnar ovanför login på mobil.
-      Kanske lägga båda dessa sections i en div som kan ta border-shadowen? Kanske blir weird annars
-      Knapp/länk för att regga nytt konto vart? -->
-      <section id="section--login" class="login-form-container">
-        <form class="login-form" method="post">
-          <div>
-            <h1>Welcome</h1>
-            <hr />
-          </div>
-          <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc -->
-          <input
-            class="input-field"
-            type="email"
-            id="user-email"
-            name="user-email"
-            placeholder="Email"
-            size="26"
-            autocomplete="off"
-            required
-          />
-          <input
-            class="input-field"
-            type="password"
-            id="user-pw"
-            name="user-pw"
-            placeholder="Password"
-            autocomplete="off"
-            required
-            minlength="8"
-            maxlength="16"
-          />
-          <span class="remember-me">
+      <div class="sections-container">
+        <section class="section-login">
+          <form class="login-form" method="post">
+            <div>
+              <h1>Login</h1>
+              <hr />
+            </div>
+            <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc -->
             <input
-              type="checkbox"
-              id="rememberLogin"
-              name="remember"
-              value="true"
+              class="input-field"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Email"
+              size="26"
+              autocomplete="off"
+              required
             />
-            <label for="rememberLogin">Remember me</label>
-          </span>
-          <input class="login-btn" type="submit" value="Login" id="login" />
-        </form>
-      </section>
+            <input
+              class="input-field"
+              type="password"
+              id="user-pw"
+              name="user-pw"
+              placeholder="Password"
+              autocomplete="off"
+              required
+              minlength="8"
+              maxlength="16"
+            />
+            <span class="remember-me">
+              <input
+                type="checkbox"
+                id="rememberLogin"
+                name="remember"
+                value="true"
+              />
+              <label for="rememberLogin">Remember me</label>
+            </span>
+            <input class="login-btn" type="submit" value="Login" id="login" />
+          </form>
+        </section>
+        <section class="section-register">
+          <h2>Register Today!</h2>
+          <p>Bla bla bla bla...</p>
+          <button class="register-btn">Register</button>
+        </section>
+      </div>
     </main>
     <script src="script/script.js"></script>
   </body>

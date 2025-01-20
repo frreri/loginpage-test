@@ -3,7 +3,7 @@
 // Denna js-fil skrev jag mest för kul och för att leka lite, när man klickar logga in så fadear rutan ut och ett välkomstmeddelande skrivs (om man angivit email och pass)
 
 const mainContainer = document.querySelector(".main-container");
-const loginWindow = document.querySelector(".login-form-container");
+const loginWindow = document.querySelector(".sections-container");
 const loginForm = document.querySelector(".login-form");
 const userEmail = document.querySelector("#user-email");
 const userPassword = document.querySelector("#user-pw");

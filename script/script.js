@@ -48,3 +48,11 @@ const getRandomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
 const capitalizeName = (name) => name[0].toUpperCase() + name.slice(1);
+
+// en iffy (IIFE) bara för kul
+(() => {
+  document.querySelector(".register-btn").addEventListener("click", (e) => {
+    e.preventDefault();
+    alert("NOT IMPLEMENTED!");
+  });
+})();

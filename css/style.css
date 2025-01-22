@@ -42,6 +42,7 @@ hr {
 
 .section-login {
   background-color: #eceff4;
+  gap: 12px;
 }
 
 .section-register {
@@ -114,4 +115,11 @@ hr {
   gap: 6px;
   margin-top: 4px;
   margin-bottom: 4px;
+}
+
+.forgot-pw {
+  width: 88%;
+  text-decoration: none;
+  color: #5e81ac;
+  font-size: 0.9rem;
 }

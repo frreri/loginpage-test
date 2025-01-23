@@ -49,10 +49,11 @@ const getRandomInt = (min, max) =>
 
 const capitalizeName = (name) => name[0].toUpperCase() + name.slice(1);
 
-// en iffy (IIFE) bara för kul
+// en iffy (IIFE) bara för kul, click event listenern får åtkomst till count via closure
 (() => {
+  let count = 0;
   document.querySelector(".register-btn").addEventListener("click", (e) => {
     e.preventDefault();
-    alert("NOT IMPLEMENTED!");
+    alert(`Click ${++count}`);
   });
 })();

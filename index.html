@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A test login page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- TODO Fixa typ fontawesome och använd mail och låsikon som placeholder i inputfälten för inlogg? -->
+    <title>Please Login</title>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="A test login page">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <!-- TODO Fixa typ fontawesome och använd mail och låsikon som placeholder i inputfälten för inlogg? -->
-  <title>Please Login</title>
-</head>
-
-<body>
-  <main class="main-container">
-    <div class="sections-container">
-      <section class="section section-login">
-        <form class="login-form" method="post">
-          <div>
-            <h1>Login</h1>
-            <hr>
-          </div>
-          <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc -->
-          <input class="input-field" type="email" id="user-email" name="user-email" placeholder="Email" size="26"
-            autocomplete="off" required>
-          <input class="input-field" type="password" id="user-pw" name="user-pw" placeholder="Password"
-            autocomplete="off" required minlength="8" maxlength="16">
-          <a href="#" class="forgot-pw">Forgot password?</a>
-          <input class="login-btn" type="submit" value="Login" id="login">
-          <span class="remember-me">
-            <input type="checkbox" id="rememberLogin" name="remember" value="true">
-            <label for="rememberLogin">Remember me</label>
-          </span>
-        </form>
-      </section>
-      <section class="section section-register">
-        <h2>Join Today!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <button class="register-btn">Register</button>
-      </section>
-    </div>
-  </main>
-  <script src="script/script.js"></script>
-</body>
-
+  <body>
+    <main class="main-container">
+      <div class="sections-container">
+        <section class="section section-login">
+          <form class="login-form" method="post">
+            <div>
+              <h1>Login</h1>
+              <hr />
+            </div>
+            <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc -->
+            <input
+              class="input-field"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Email"
+              size="26"
+              required
+            />
+            <input
+              class="input-field"
+              type="password"
+              id="user-pw"
+              name="user-pw"
+              placeholder="Password"
+              required
+              minlength="8"
+              maxlength="16"
+            />
+            <a href="#" class="forgot-pw">Forgot password?</a>
+            <input class="login-btn" type="submit" value="Login" id="login" />
+            <span class="remember-me">
+              <input
+                type="checkbox"
+                id="rememberLogin"
+                name="remember"
+                value="true"
+              />
+              <label for="rememberLogin">Remember me</label>
+            </span>
+          </form>
+        </section>
+        <section class="section section-register">
+          <h2>Join Today!</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <button class="register-btn">Register</button>
+        </section>
+      </div>
+    </main>
+    <script src="script/script.js"></script>
+  </body>
 </html>

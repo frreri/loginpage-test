@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
   color: #3b4252;
@@ -25,14 +26,12 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* Efter en del testande och undersökande med att få till en gemensam box-shadow för sektionerna (med flex-wrap blir skuggan fel när det wrappar)
-  Så hittade jag filter: drop-shadow som gör precis det jag vill utan krångel */
   filter: drop-shadow(2px 2px 10px rgba(22, 22, 22, 0.6));
 }
 
 .section {
   width: 300px;
-  height: 300px;
+  height: 326px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +63,11 @@ hr {
   border-radius: 10px;
   border: none;
   background-color: #d8dee9;
-  font-weight: bold;
+  margin: 2px 0;
+}
+
+.input-field::placeholder {
+  font-style: italic;
 }
 
 .input-field:focus {
@@ -79,6 +82,7 @@ hr {
   background-color: #5e81ac;
   color: white;
   cursor: pointer;
+  width: 100%;
 }
 
 .login-btn:hover {
@@ -110,7 +114,6 @@ hr {
 }
 
 .remember-me {
-  font-size: 0.9rem;
   display: flex;
   gap: 6px;
   margin-top: 4px;
@@ -121,5 +124,13 @@ hr {
   width: 88%;
   text-decoration: none;
   color: #5e81ac;
+  margin: 6px 0;
+}
+
+.input-label {
+  font-weight: bold;
+}
+
+.smaller-text {
   font-size: 0.9rem;
 }

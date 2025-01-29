@@ -5,7 +5,6 @@
     <meta name="description" content="A test login page" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <!-- TODO Fixa typ fontawesome och använd mail och låsikon som placeholder i inputfälten för inlogg? -->
     <title>Please Login</title>
   </head>
 
@@ -18,37 +17,50 @@
               <h1>Login</h1>
               <hr />
             </div>
-            <!-- TODO Fixa labels för båda nedan fields, till exempel för screen readers etc -->
-            <input
-              class="input-field"
-              type="email"
-              id="user-email"
-              name="user-email"
-              placeholder="Email"
-              size="26"
-              required
-            />
-            <input
-              class="input-field"
-              type="password"
-              id="user-pw"
-              name="user-pw"
-              placeholder="Password"
-              required
-              minlength="8"
-              maxlength="16"
-            />
-            <a href="#" class="forgot-pw">Forgot password?</a>
-            <input class="login-btn" type="submit" value="Login" id="login" />
-            <span class="remember-me">
+            <div>
+              <label class="input-label smaller-text" for="user-email"
+                >Email</label
+              >
               <input
-                type="checkbox"
-                id="rememberLogin"
-                name="remember"
-                value="true"
+                class="input-field"
+                type="email"
+                id="user-email"
+                name="user-email"
+                size="26"
+                required
+                placeholder="e.g. name@domain.com"
               />
-              <label for="rememberLogin">Remember me</label>
-            </span>
+            </div>
+            <div>
+              <label class="input-label smaller-text" for="user-pw"
+                >Password</label
+              >
+              <input
+                class="input-field"
+                type="password"
+                id="user-pw"
+                name="user-pw"
+                required
+                size="26"
+                minlength="8"
+                maxlength="16"
+                placeholder="8 to 16 characters"
+              />
+              <a href="#" class="forgot-pw smaller-text">Forgot password?</a>
+            </div>
+
+            <div>
+              <input class="login-btn" type="submit" value="Login" id="login" />
+              <span class="remember-me smaller-text">
+                <input
+                  type="checkbox"
+                  id="rememberLogin"
+                  name="remember"
+                  value="true"
+                />
+                <label for="rememberLogin">Remember me</label>
+              </span>
+            </div>
           </form>
         </section>
         <section class="section section-register">

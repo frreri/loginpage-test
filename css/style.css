@@ -26,6 +26,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* A drop-shadow on the sections container helps me give both sections a shared shadow that works fine with flex-wrap */
   filter: drop-shadow(2px 2px 10px rgba(22, 22, 22, 0.6));
 }
 

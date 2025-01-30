@@ -1,6 +1,6 @@
 "use strict";
 
-// Denna js-fil skrev jag mest för kul och för att leka lite, när man klickar logga in så fadear rutan ut och ett välkomstmeddelande skrivs (om man angivit email och pass)
+// JavaScript was not required in the task, but I added some for fun.
 
 const mainContainer = document.querySelector(".main-container");
 const loginWindow = document.querySelector(".sections-container");
@@ -8,6 +8,7 @@ const loginForm = document.querySelector(".login-form");
 const userEmail = document.querySelector("#user-email");
 const userPassword = document.querySelector("#user-pw");
 
+// I add an eventlistener to the form that overwrites the default submit behavior
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const email = userEmail.value;
@@ -31,9 +32,8 @@ loginForm.addEventListener("submit", (e) => {
   }
 });
 
-// För att ge effekt av att medelandet skrivs på tangetbord live lägger jag till en bokstav i taget på variablen curText nedan
-// Detta gör jag via recursion tills arrayen med bokstäver är tom.
-
+// To give the effect of the welcome message being typed out, I wrote this recursive function that takes an array of characters to write
+// (it also takes the element to write to, and optionally a current text which is used when it is called recursively)
 const writeSlow = (el, charArr, curText = "") => {
   curText += charArr.shift();
   el.textContent = curText;
@@ -49,7 +49,7 @@ const getRandomInt = (min, max) =>
 
 const capitalizeName = (name) => name[0].toUpperCase() + name.slice(1);
 
-// en iffy (IIFE) bara för kul, click event listenern behåller åtkomst till count via closure
+// It felt wrong to not have the register button do anything, so i practiced IIFE and closure
 (() => {
   let count = 0;
   document.querySelector(".register-btn").addEventListener("click", (e) => {

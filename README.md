@@ -6,4 +6,4 @@ I tried to logically group some of the elements together and have some spacing i
 The login and register sections lie side by side on large screens, but wrap to be placed vertically on smaller screens.
 
 
-![Image](https://github.com/user-attachments/assets/91deb2f1-cd02-49d7-8c13-b543bec03f7d)
+![Image](https://github.com/user-attachments/assets/5e7549ba-4da8-4f44-8616-cc91e8c8b22f)

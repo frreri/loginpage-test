@@ -6,7 +6,7 @@
   color: #3b4252;
 }
 
-hr {
+#form-heading-group hr {
   border: none;
   border-top: 2px solid #d8dee9;
   margin-top: 6px;
@@ -55,6 +55,10 @@ hr {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 12px;
+}
+
+.input-label {
+  font-weight: bold;
 }
 
 .input-field {
@@ -125,10 +129,6 @@ hr {
   text-decoration: none;
   color: #5e81ac;
   margin: 6px 0;
-}
-
-.input-label {
-  font-weight: bold;
 }
 
 .smaller-text {

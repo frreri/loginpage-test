@@ -7,4 +7,4 @@ The login and register sections lie side by side on large screens, but wrap to b
 
 ![Image](https://github.com/user-attachments/assets/5e7549ba-4da8-4f44-8616-cc91e8c8b22f)
 
-###### The HTML validates with no errors or warnings at validator.w3.org (there are some info messages regarding the traling slash /> on self closing tags that Prettier adds, but that is not an issue and the HTML is still valid. Even code exmamples at MDN web docs use prettier and the trailing slashes)
+###### The HTML validates with no errors or warnings at validator.w3.org (there are some info messages regarding the traling slash /> on self closing tags that Prettier adds that i found annoying, but i learned that it isn't a problem and just info in case they were used for the wrong reason. Even code exmamples at MDN web docs use the trailing slashes and Prettier as formatter)

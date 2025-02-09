@@ -51,9 +51,19 @@ const capitalizeName = (name) => name[0].toUpperCase() + name.slice(1);
 
 // It felt wrong to not have the register button do anything, so i practiced IIFE and closure
 (() => {
+  const regBtn = document.querySelector(".register-btn");
   let count = 0;
-  document.querySelector(".register-btn").addEventListener("click", (e) => {
+  regBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    alert(`Click ${++count}`);
+    count++;
+    if (count > 15) {
+      regBtn.style.backgroundColor = "#666";
+      regBtn.style.cursor = "default";
+      regBtn.disabled = true;
+    } else if (count > 10) {
+      regBtn.textContent = "ENOUGH!!";
+    } else if (count > 5) {
+      regBtn.textContent = "Stop it!";
+    }
   });
 })();
